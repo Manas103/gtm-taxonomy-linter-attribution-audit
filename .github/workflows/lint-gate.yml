@@ -1,0 +1,33 @@
+name: lint-gate
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test-and-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run test suite
+        run: PYTHONPATH=. python -m pytest tests -q
+
+      - name: Run lint battery (180 seeded violations, 400 valid links)
+        run: PYTHONPATH=. python scripts/run_lint_battery.py
+
+      - name: Run attribution recovery battery
+        run: PYTHONPATH=. python scripts/run_attribution_recovery_battery.py
+
+      - name: Lint the real campaign launch sheet (fails the build on any violation)
+        run: PYTHONPATH=. python scripts/lint_campaign_sheet.py

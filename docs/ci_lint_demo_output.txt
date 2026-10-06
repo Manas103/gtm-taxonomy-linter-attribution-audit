@@ -1,0 +1,4 @@
+sheet: C:\Users\Manas\Downloads\Auto Job Applier\Total Job Application process flow\projects\gtm-taxonomy-linter-attribution-audit\data\launch_sheet.csv
+rows checked: 20
+clean rows: 20 / 20
+violations: 0

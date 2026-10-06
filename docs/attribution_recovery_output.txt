@@ -1,0 +1,9 @@
+total sessions: 1254
+naive (direct)/(none) sessions: 954
+  of those, genuinely earned by a campaign within the lookback window: 403
+  of those, genuinely organic (no recoverable campaign, ever or in-window): 551
+
+correctly traced back to the exact earning campaign: 403 / 403
+false recoveries on genuinely organic sessions: 0 / 551
+
+ATTRIBUTION RECOVERY BATTERY: PASS

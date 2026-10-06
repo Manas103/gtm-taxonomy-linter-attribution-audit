@@ -1,0 +1,15 @@
+valid links checked: 400
+false flags on valid links: 0 / 400
+
+seeded violations caught by exact rule: 180 / 180
+  missing_required_param: 20 / 20
+  unknown_utm_source: 20 / 20
+  medium_not_valid_for_source: 20 / 20
+  campaign_code_wrong_shape: 20 / 20
+  campaign_code_not_lowercase: 20 / 20
+  campaign_not_registered: 20 / 20
+  not_https: 20 / 20
+  landing_domain_not_allowed: 20 / 20
+  duplicate_query_param: 20 / 20
+
+LINT BATTERY: PASS
